@@ -677,7 +677,7 @@
            ========================================================================= */
         // ضع الرابط الأساسي الخاص بك على جيتهاب هنا
         // مثال: "https://raw.githubusercontent.com/YourUsername/YourRepoName/main"
-        const GITHUB_BASE_URL = "https://raw.githubusercontent.com/websitebdr/best-football-pics/main"; 
+        const GITHUB_BASE_URL = "https://raw.githubusercontent.com/username/repo/main"; 
         
         const TOTAL_IMAGES = 244;
 
@@ -698,12 +698,13 @@
             for (let i = 1; i <= TOTAL_IMAGES; i++) {
                 let folder = '';
                 if (i >= 1 && i <= 99) folder = 'pics';
-                else if (i >= 100 && i <= 195) folder = 'pics 2';
+                else if (i >= 100 && i <= 195) folder = 'pics2'; // تم حذف المسافة
                 else if (i >= 196 && i <= 244) folder = 'pics3';
 
                 imagesData.push({
                     id: i,
-                    url: `${GITHUB_BASE_URL}/${folder}/img(${i}).jpg`
+                    // تم إضافة مسافة بين كلمة img والقوس
+                    url: `${GITHUB_BASE_URL}/${folder}/img (${i}).jpg` 
                 });
             }
             filteredData = [...imagesData];
